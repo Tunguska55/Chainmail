@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  chain:
+    build:
+      context: .
+      dockerfile: chain.Dockerfile
+    image: chainlink-sol-dev
+    volumes:
+      - ./projwork/:/opt/chain:rw
