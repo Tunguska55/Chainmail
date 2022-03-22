@@ -8,7 +8,7 @@ WORKDIR $HOME/chain/installs
 RUN apk add --no-cache curl git 
 
 # Install Rust
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -y | sh
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
 
 # Install Solana
 RUN sh -c $(curl -sSfL https://release.solana.com/v1.9.5/install)
