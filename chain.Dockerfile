@@ -1,11 +1,11 @@
-FROM node:current-alpine3.14
+FROM node:lts-buster
 
 RUN mkdir -p $HOME/chain/installs
 
 WORKDIR $HOME/chain/installs
 
 # Install prerequisites
-RUN apk add --no-cache curl git 
+RUN apt install curl git -y 
 
 # Install Rust
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
