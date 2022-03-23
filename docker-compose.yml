@@ -6,7 +6,5 @@ services:
       context: .
       dockerfile: chain.Dockerfile
     image: chainlink-sol-dev
-    volumes:
-      - ./projwork/:$HOME/chain
     stdin_open: true
     tty: true
